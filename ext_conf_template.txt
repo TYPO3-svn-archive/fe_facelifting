@@ -1,0 +1,23 @@
+# cat=basic; type=string; label= PopUp Width 
+popup_width = 740
+
+# cat=basic; type=string; label= PopUp Height
+popup_height = 600
+
+# cat=basic; type=boolean; label= Override with USER TSConfig
+overrideWithUserTsConfig = 0
+
+# cat=basic; type=string; label= Icons Path: (default: typo3/sysext/t3skin/icons/gfx/)
+path_to_icons = typo3/sysext/t3skin/icons/gfx/
+
+# cat=basic; type=string; label= Icons Width in px: (default: 16)
+icon_w = 16
+
+# cat=basic; type=string; label= Icons Height in px: (default: 16)
+icon_h = 16
+
+# cat=basic; type=color; label= Background Color for Icons
+bgcolor_icons = #3D8FCC
+
+# cat=basic; type=color; label= Background Color for Label
+bgcolor_label = #F6F2E6
