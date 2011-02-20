@@ -4,6 +4,13 @@ popup_width = 740
 # cat=basic; type=string; label= PopUp Height
 popup_height = 600
 
+# cat=basic; type=string; label= PopUp Width, if "Wide document background" is active
+popup_widthWideDocument = 840
+
+# cat=basic; type=string; label= PopUp Height, if "Wide document background" is active
+popup_heightWideDocument = 600
+
+
 # cat=basic; type=boolean; label= Override with USER TSConfig
 overrideWithUserTsConfig = 0
 

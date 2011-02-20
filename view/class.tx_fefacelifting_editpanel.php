@@ -308,18 +308,26 @@ class tx_fefacelifting_editpanel {
 	protected function editPanelLinkWrap_doWrap($string, $url, $currentRecord)	{
 	
 		if(empty($this->extConf)) $this->extConf = unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['fe_facelifting']);
-		
+
 		if($this->extConf['overrideWithUserTsConfig']) {
 		
 			if(is_array($GLOBALS['BE_USER']->getTSConfig('tx_fe_facelifting.'))){
 				$tmp = array();
 				$tmp = $GLOBALS['BE_USER']->getTSConfig('tx_fe_facelifting.');
 				
-					if(is_array($tmp['properties'])){				
-						$this->extConf['popup_width'] = $tmp['properties']['fe_popup_width'];
-						$this->extConf['popup_height'] = $tmp['properties']['fe_popup_height'];
-					}	
+				if(is_array($tmp['properties']) && $GLOBALS['BE_USER']->uc['edit_wideDocument']){
+					$this->extConf['popup_width'] = $tmp['properties']['fe_popup_widthWideDocument'];
+					$this->extConf['popup_height'] = $tmp['properties']['fe_popup_heightWideDocument'];
+				}else{
+					$this->extConf['popup_width'] = $tmp['properties']['fe_popup_width'];
+					$this->extConf['popup_height'] = $tmp['properties']['fe_popup_height'];
+				}
 			}
+		}
+
+		if($GLOBALS['BE_USER']->uc['edit_wideDocument']&& !$this->extConf['overrideWithUserTsConfig']){
+			$this->extConf['popup_width'] = $this->extConf['popup_widthWideDocument'];
+			$this->extConf['popup_height'] = $this->extConf['popup_heightWideDocument'];
 		}
 	
 		if ($GLOBALS['BE_USER']->uc['TSFE_adminConfig']['edit_editNoPopup'] || $GLOBALS['BE_USER']->extAdminConfig['module.']['edit.']['forceNoPopup']) {
@@ -332,7 +340,7 @@ class tx_fefacelifting_editpanel {
 			return '<a href="' . htmlspecialchars($url . '&returnUrl=' . rawurlencode($retUrl)) . '" class="frontEndEditIconLinks">' . $string . '</a>';
 		} else {
 			return '<a href="#" onclick="' .
-				htmlspecialchars('vHWin=window.open(\'' . $url . '&returnUrl=close.html\',\'FEquickEditWindow\',\'' . ($GLOBALS['BE_USER']->uc['edit_wideDocument'] ? 'width=690,height=500' : 'width=' . $this->extConf['popup_width'] . ',height=' . $this->extConf['popup_height'] . ' ') . ',status=0,menubar=0,scrollbars=1,resizable=1\');vHWin.focus();return false;') .
+				htmlspecialchars('vHWin=window.open(\'' . $url . '&returnUrl=close.html\',\'FEquickEditWindow\',\'' . ( 'width=' . $this->extConf['popup_width'] . ',height=' . $this->extConf['popup_height'] . ' ') . ',status=0,menubar=0,scrollbars=1,resizable=1\');vHWin.focus();return false;') .
 				'" class="frontEndEditIconLinks">' . $string . '</a>';
 		}
 	}
