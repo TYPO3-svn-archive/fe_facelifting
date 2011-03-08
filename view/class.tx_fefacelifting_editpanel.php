@@ -57,7 +57,6 @@ class tx_fefacelifting_editpanel {
 
 		//get config from Extension Manager
 		$this->extConf = unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['fe_facelifting']);
-
 	}
 
 	/**
