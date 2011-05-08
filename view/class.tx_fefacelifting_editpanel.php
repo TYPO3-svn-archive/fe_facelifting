@@ -1,9 +1,12 @@
 <?php
 /***************************************************************
  *  Copyright notice
- *
+ *	original by:
  *  (c) 2008-2009 Jeff Segars <jeff@webempoweredchurch.org>
  *  (c) 2008-2009 David Slayback <dave@webempoweredchurch.org>
+ *
+ * 	edit by:
+ *  (c) 2011 Sven Juergens <post@blue-side.de>
  *  All rights reserved
  *
  *  This script is part of the TYPO3 project. The TYPO3 project is
@@ -28,12 +31,14 @@
 /**
  * View class for the edit panels in frontend editing.
  *
- * $Id: class.tx_feedit_editpanel.php 5761 2009-08-05 10:05:29Z rupi $
- *
+ * original by:
  * @author	Jeff Segars <jeff@webempoweredchurch.org>
  * @author	David Slayback <dave@webempoweredchurch.org>
+ *
+ * edit by:
+ * @author	Sven Juergens <post@blue-side.de>
  * @package TYPO3
- * @subpackage feedit
+ * @subpackage fe_facelifting
  */
 class tx_fefacelifting_editpanel {
 
@@ -474,8 +479,8 @@ class tx_fefacelifting_editpanel {
 
 }
 
-if (defined('TYPO3_MODE') && $TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/feedit/view/class.tx_feedit_editpanel.php']) {
-	include_once($TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/feedit/view/class.tx_feedit_editpanel.php']);
+if (defined('TYPO3_MODE') && $GLOBALS['TYPO3_CONF_VARS'][TYPO3_MODE]['XCLASS']['ext/fe_facelifting/view/class.tx_fefacelifting_editpanel.php']) {
+	include_once($GLOBALS['TYPO3_CONF_VARS'][TYPO3_MODE]['XCLASS']['ext/fe_facelifting/view/class.tx_fefacelifting_editpanel.php']);
 }
 
 ?>
