@@ -1,30 +1,30 @@
-# cat=basic; type=string; label= PopUp Width 
+# cat=basic; type=string; label=LLL:EXT:fe_facelifting/locallang.xml:popup_width
 popup_width = 740
 
-# cat=basic; type=string; label= PopUp Height
+# cat=basic; type=string; label= LLL:EXT:fe_facelifting/locallang.xml:popup_height
 popup_height = 600
 
-# cat=basic; type=string; label= PopUp Width, if "Wide document background" is active
+# cat=basic; type=string; label= LLL:EXT:fe_facelifting/locallang.xml:popup_widthWideDocument
 popup_widthWideDocument = 840
 
-# cat=basic; type=string; label= PopUp Height, if "Wide document background" is active
+# cat=basic; type=string; label= LLL:EXT:fe_facelifting/locallang.xml:popup_heightWideDocument
 popup_heightWideDocument = 600
 
 
-# cat=basic; type=boolean; label= Override with USER TSConfig
+# cat=basic; type=boolean; label= LLL:EXT:fe_facelifting/locallang.xml:overrideWithUserTsConfig
 overrideWithUserTsConfig = 0
 
-# cat=basic; type=string; label= Icons Path: (default: typo3/sysext/t3skin/icons/gfx/)
+# cat=basic; type=string; label= LLL:EXT:fe_facelifting/locallang.xml:path_to_icons
 path_to_icons = typo3/sysext/t3skin/icons/gfx/
 
-# cat=basic; type=string; label= Icons Width in px: (default: 16)
+# cat=basic; type=string; label= LLL:EXT:fe_facelifting/locallang.xml:icon_w
 icon_w = 16
 
-# cat=basic; type=string; label= Icons Height in px: (default: 16)
+# cat=basic; type=string; label= LLL:EXT:fe_facelifting/locallang.xml:icon_h
 icon_h = 16
 
-# cat=basic; type=color; label= Background Color for Icons
+# cat=basic; type=color; label= LLL:EXT:fe_facelifting/locallang.xml:bgcolor_icons
 bgcolor_icons = #3D8FCC
 
-# cat=basic; type=color; label= Background Color for Label
+# cat=basic; type=color; label= LLL:EXT:fe_facelifting/locallang.xml:bgcolor_label
 bgcolor_label = #F6F2E6

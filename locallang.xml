@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+    <meta type="array">
+        <description>Labels for fe_facelifting</description>
+        <type>module</type>
+        <csh_table></csh_table>
+        <labelContext type="array">
+        </labelContext>
+    </meta>
+    <data type="array">
+        <languageKey index="default" type="array">
+            <label index="popup_width">PopUp Width</label>
+            <label index="popup_height">PopUp Height</label>
+            <label index="popup_widthWideDocument">PopUp Width, if "Wide document background" is active</label>
+            <label index="popup_heightWideDocument">PopUp Height, if "Wide document background" is active</label>
+            <label index="overrideWithUserTsConfig">Override with USER TSConfig</label>
+            <label index="path_to_icons">Icons Path: (default: typo3/sysext/t3skin/icons/gfx/)</label>
+            <label index="icon_w">Icons Width in px: (default: 16)</label>
+            <label index="icon_h">Icons Height in px: (default: 16)</label>
+            <label index="bgcolor_icons">Background Color for Icons</label>
+            <label index="bgcolor_label">Background Color for Label</label>
+        </languageKey>
+        <languageKey index="de" type="array">
+            <label index="popup_width">PopUp Breite</label>
+            <label index="popup_height">PopUp Höhe</label>
+            <label index="popup_widthWideDocument">PopUp Breite, wenn "Breiten Hintergrund anzeigen" benutzt wird</label>
+            <label index="popup_heightWideDocument">PopUp Höhe, wenn "Breiten Hintergrund anzeigen" benutzt wird</label>
+            <label index="overrideWithUserTsConfig">Überschreibe Einstellungen: mit USER TSConfig</label>
+            <label index="path_to_icons">Pfad zu den Icons: (standard: typo3/sysext/t3skin/icons/gfx/)</label>
+            <label index="icon_w">Icon Breite in px: (standard: 16)</label>
+            <label index="icon_h">Icon Höhe in px: (standard: 16)</label>
+            <label index="bgcolor_icons">Hintergrundfarbe für Icons</label>
+            <label index="bgcolor_label">Hintergrundfarbe für Label</label>
+        </languageKey>
+    </data>
+</T3locallang>
