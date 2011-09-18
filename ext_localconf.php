@@ -1,6 +1,8 @@
 <?php
 
-if (!defined ('TYPO3_MODE')) 	die ('Access denied.');
+if (!defined ('TYPO3_MODE')){
+    die ('Access denied.');
+}
 
 
 if (t3lib_div::int_from_ver(TYPO3_version) >= t3lib_div::int_from_ver('4.2.99')) {

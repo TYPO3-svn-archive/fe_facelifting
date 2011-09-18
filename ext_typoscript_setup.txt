@@ -1,17 +1,26 @@
 plugin.fe_facelifting{
     integrateJQuery = 0
-    integrateJQueryHighlightCode = 0
+    integrateAdditionalJS = 0
+    integrateAdditionalCSS = 0
 
-    jQueryHighlightCode (
-    $("table.typo3-editPanel").mouseover(function (){
-         $(this).parent().prev().addClass("feedit-hover");
-        });
-    $("table.typo3-editPanel").mouseout(function (){
-            $(this).parent().prev().removeClass("feedit-hover");
-     });
+    // from html5 Boilerplate
+    jQueryIntegration(
+        <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="typo3conf/ext/fe_facelifting/Resources/jquery-1.6.4.min.js"><\/script>')</script>
     )
 
-    jQueryHighlightCSS(
+    additionalJS (
+        jQuery("table.typo3-editPanel").hover(
+            function () {
+                jQuery(this).parent().prev().addClass("feedit-hover");
+            },
+            function (){
+             jQuery(this).parent().prev().removeClass("feedit-hover");
+        });
+    )
+
+    additionalCSS(
         .feedit-hover {background: #fef0de;}
     )
 }

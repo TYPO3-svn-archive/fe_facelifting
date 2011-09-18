@@ -36,19 +36,21 @@ class tx_fefacelifting_contentpostproc {
                 return;
             }
 
-            if ( isset($config['integrateJQuery']) && $config['integrateJQuery'] == 1) {
-                $content .= PHP_EOL . '
-<script src="' . t3lib_extMgm::siteRelPath('fe_facelifting') . 'Resources/jquery-1.5.1.min.js' . '" type="text/javascript"></script>
-				';
+            if ( isset($config['integrateJQueryLibrary']) && $config['integrateJQueryLibrary'] == 1) {
+                $content .=  $GLOBALS['TSFE']->tmpl->setup['plugin.']['fe_facelifting.']['jQueryIntegration'];
             }
-            if (isset($config['integrateJQueryHighlightCode']) && $config['integrateJQueryHighlightCode'] == 1) {
+            if (isset($config['integrateAdditionalJS']) && $config['integrateAdditionalJS'] == 1) {
                 $content .= PHP_EOL . '
-<script type="text/javascript"> ' .
-                            $GLOBALS['TSFE']->tmpl->setup['plugin.']['fe_facelifting.']['jQueryHighlightCode'] . '
+<script type="text/javascript"> '
+                           . $GLOBALS['TSFE']->tmpl->setup['plugin.']['fe_facelifting.']['additionalJS'] . '
 </script>';
             }
-            $content .= '<style type="text/css"> ' . $GLOBALS['TSFE']->tmpl->setup['plugin.']['fe_facelifting.']['jQueryHighlightCSS'] . ' </style>';
-            $parentObject->content = str_replace('</body>', $content . '</body>', $parentObject->content);
+            if ( isset($config['integrateAdditionalCSS']) && $config['integrateAdditionalCSS'] == 1) {
+                $content .= '<style type="text/css"> ' . $GLOBALS['TSFE']->tmpl->setup['plugin.']['fe_facelifting.']['additionalCSS'] . ' </style>';
+            }
+            if(!empty($content)){
+                $parentObject->content = str_replace('</body>', $content . '</body>', $parentObject->content);
+            }
         }
     }
 }
