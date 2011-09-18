@@ -11,7 +11,7 @@
 ########################################################################
 
 $EM_CONF[$_EXTKEY] = array(
-	'title' => 'FE_facelifting (using XCLASS)',
+	'title' => 'FE_facelifting',
 	'description' => 'Change path to Frontend Editing icons and change width and height of feedit PopUps',
 	'category' => 'fe',
 	'shy' => 0,
