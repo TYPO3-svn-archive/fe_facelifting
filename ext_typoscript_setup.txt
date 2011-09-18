@@ -1,13 +1,20 @@
-plugin.fe_facelifting.integrateJQuery = 1
-plugin.fe_facelifting.integrateJQueryHighlightCode = 1
-plugin.fe_facelifting.jQueryHighlightCode (
-$("table.typo3-editPanel").mouseover(function (){
-     $(this).parent().prev().addClass("feedit-hover");
-    });
-$("table.typo3-editPanel").mouseout(function (){
-        $(this).parent().prev().removeClass("feedit-hover");
- });
-)
-plugin.fe_facelifting.jQueryHighlightCSS(
-    .feedit-hover {background: #fef0de;}
-)
+plugin.fe_facelifting{
+    integrateJQuery = 0
+    integrateJQueryHighlightCode = 0
+
+    jQueryHighlightCode (
+    $("table.typo3-editPanel").mouseover(function (){
+         $(this).parent().prev().addClass("feedit-hover");
+        });
+    $("table.typo3-editPanel").mouseout(function (){
+            $(this).parent().prev().removeClass("feedit-hover");
+     });
+    )
+
+    jQueryHighlightCSS(
+        .feedit-hover {background: #fef0de;}
+    )
+}
+
+
+
